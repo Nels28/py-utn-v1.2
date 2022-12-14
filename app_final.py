@@ -1,5 +1,5 @@
 from ast import Delete
-from msilib.schema import SelfReg
+# from msilib.schema import SelfReg
 from tkinter import *
 import random
 import os
