@@ -9,19 +9,23 @@ from tkinter import END
 # ==================Area base de datos===========
 db_name = "dbapp.db"
 # ======================Base de Datos=======================
-def run_query(self, query, param=()):
-    with sqlite3.connect(self.db_name) as conn:
-        cursor = conn.cursor()
-        result = cursor.execute(query, param)
-        conn.commit()
-    return result
+class Abmc:
+    def __init__(
+        self,
+    ):
+        
+        def run_query(self, query, param=()):
+            with sqlite3.connect(self.db_name) as conn:
+                cursor = conn.cursor()
+                result = cursor.execute(query, param)
+                conn.commit()
+            return result
 
     # ===========================Validación de campo y agregar cliente nuevo==================
-
-
-def add_clientes(self):
-    patron = "^[a-zA-Z0-9]"
-    cadena1 = self.c_name_nuevo.get()
+     
+    def add_clientes(self):
+        patron = "^[a-zA-Z0-9]"
+        cadena1 = self.c_name_nuevo.get()
     if re.match(patron, cadena1):
         query = "INSERT INTO clientes VALUES(NULL, ?, ?)"
         param = (self.c_name_nuevo.get(), self.c_tel_nuevo.get())
