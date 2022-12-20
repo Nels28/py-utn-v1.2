@@ -1,10 +1,17 @@
 from tkinter import Tk
-import vista
+import vista3
+
+# from modelo import *
+
 
 class Controller:
+    """
+    Está es la clase principal
+    """
+
     def __init__(self, root):
         self.root_controler = root
-        self.objeto_vista = vista.Bill_App(self.root_controler)
+        self.objeto_vista = vista3.Ventanita(self.root_controler)
 
 
 if __name__ == "__main__":
